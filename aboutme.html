@@ -1,0 +1,87 @@
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #121212; /* Dark background */
+      color: #ffffff; /* White text */
+      font-family: Arial, sans-serif;
+    }
+    .logo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-top: 20px;
+    }
+    .about-me {
+      max-width: 80%;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .social-media {
+      display: flex;
+      justify-content: space-around;
+      width: 80%;
+      margin-top: 20px;
+    }
+    .social-media a {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    .social-media img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      .about-me {
+        max-width: 100%;
+        padding: 0 10px; /* Added padding for smaller screens */
+      }
+      .social-media {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .social-media a {
+        margin: 10px; /* Added margin between social media icons */
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="previous">&laquo; Previous</a>
+  <a href="resume.html" class="next">Next &raquo;</a>
+  <img src="jemmiii.jpg" alt="Logo" class="logo">
+  <div class="about-me">
+    <h5>About Me</h5>
+    <p>Hey, I am Jemin Patidar, a Pre-Final year student at Manipal University Jaipur, pursuing B.Tech in Information Technology. This is my Portfolio website. THANK YOU for visiting!</p>
+  </div>
+  <div class="social-media">
+    <a href="https://www.instagram.com/jemmiii__/?igsh=NjlqYnhhcjVrcmI0" target="_blank"><img src="insta.jpg" alt="Instagram"></a>
+    <a href="https://www.linkedin.com/in/jemin-patidar/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank"><img src="linkdin.jpg" alt="LinkedIn"></a>
+    <a href="https://www.youtube.com/@muj.vlogs26" target="_blank"><img src="yt.jpg" alt="YouTube"></a>
+    <a href="https://www.facebook.com/jemin.patidar.56?mibextid=LQQJ4d" target="_blank"><img src="facbook.png" alt="Facebook"></a>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

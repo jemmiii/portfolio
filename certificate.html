@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Certificates</title>
+  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+    }
+    .container {
+      text-align: center;
+      padding: 20px;
+      max-width: 800px; /* Adjusted max-width for better layout on larger screens */
+    }
+    .title {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #f8f8f8;
+    }
+    .certificates {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px; /* Added gap between certificate boxes */
+    }
+    .certificate-box {
+      width: 150px;
+      height: 150px;
+      margin: 15px;
+      background-color: #1e1e1e;
+      border: 2px solid #ffffff;
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .certificate-box img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+    @media (max-width: 600px) {
+      .certificate-box {
+        width: 120px;
+        height: 120px;
+      }
+    }
+  </style>
+</head>
+<a href="resume.html" class="previous">&laquo; Previous</a>
+<a href="Contactme.html" class="next">Next &raquo;</a>
+<body>
+  <div class="container">
+    <h1 class="title">My Certificates</h1>
+    <div class="certificates">
+      <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Tata/MyXvBcppsW2FkNYCX_Tata%20Group_JLzxEvedx5EozZHJ4_1720080419137_completion_certificate.pdf" target="_blank" class="certificate-box">
+        <img src="tata.png" alt="Certificate 1 (TATA)">
+      </a>
+      <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/J.P.%20Morgan/R5iK7HMxJGBgaSbvk_J.P.%20Morgan_JLzxEvedx5EozZHJ4_1720082411404_completion_certificate.pdf" target="_blank" class="certificate-box">
+        <img src="jp.png" alt="Certificate 2(JPMORGAN)">
+      </a>
+      <a href="https://rha.ole.redhat.com/rha/api/certificates/attendance/uuid/f7c68b31-2955-4da2-9382-860741da35a0" target="_blank" class="certificate-box">
+        <img src="redhat.jpg" alt="Certificate 3(REDHAT)">
+      </a>
+      <a href="https://media.geeksforgeeks.org/certificates/1695900771/ec7ed54a30587e59fa87e7f0a0d66bb7.pdf" target="_blank" class="certificate-box">
+        <img src="gfg.png" alt="Certificate 4(GEEKSFORGEEKS)">
+      </a>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

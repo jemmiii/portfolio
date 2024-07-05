@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+  <!-- Materialize CSS CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  
+<a href="index.html" class="next">Next &raquo;</a>
+
+
+  <style>
+    /* Internal CSS */
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffcc00; /* Dark yellow background */
+      color: #000000; /* Black text color */
+    }
+    .container {
+      text-align: center;
+      padding: 20px;
+      background-color: #333333; /* Dark form background */
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    .title {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+    .form-container {
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .input-field input,
+    .input-field textarea {
+      color: #ffffff;
+    }
+    .input-field label {
+      color: #ffffff;
+    }
+    .input-field input::placeholder,
+    .input-field textarea::placeholder {
+      color: #b0b0b0;
+    }
+    .input-field .materialize-textarea {
+      height: 100px;
+    }
+    .btn {
+      background-color: #ffcc00; /* Dark yellow button */
+      color: #000000; /* Black text on button */
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Contact Me</h1>
+    <div class="form-container">
+      <form id="contact-form">
+        <div class="input-field">
+          <input id="name" type="text" name="name" required>
+          <label for="name">Name</label>
+        </div>
+        <div class="input-field">
+          <input id="email" type="email" name="email" required>
+          <label for="email">Email</label>
+        </div>
+        <div class="input-field">
+          <textarea id="comment" name="comment" class="materialize-textarea" required></textarea>
+          <label for="comment">Comment</label>
+        </div>
+        <button type="submit" class="btn">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Materialize JS CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    // Handle form submission
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const form = event.target;
+      const data = new FormData(form);
+
+      // Configure email sending (Using an email sending service or server-side script)
+      fetch('YOUR_EMAIL_SERVICE_ENDPOINT', {
+        method: 'POST',
+        body: data
+      }).then(response => {
+        if (response.ok) {
+          alert('Thank you for your message!');
+          form.reset();
+        } else {
+          alert('There was a problem sending your message.');
+        }
+      }).catch(error => {
+        console.error('Error:', error);
+        alert('There was a problem sending your message.');
+      });
+    });
+    
+  </script>
+</body>
+</html>
+
+   

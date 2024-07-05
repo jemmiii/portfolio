@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Resume</title>
+  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+    }
+    .container {
+      text-align: center;
+      padding: 20px;
+      max-width: 800px; /* Adjusted max-width for better readability on larger screens */
+    }
+    .title {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #f8f8f8;
+    }
+ /* .image-box {
+      width: 100%;
+      max-width: 600px; 
+      height: auto;
+      border: 2px solid #ffffff;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+    .image-box img {
+      width: 100%;
+      height: auto; 
+      object-fit: cover;
+    } */
+    .section {
+      margin-bottom: 20px;
+      text-align: left; /* Adjusted text alignment for sections */
+    }
+    .section h5 {
+      color: #f8f8f8;
+    }
+    .skills {
+      width: 100%;
+      max-width: 600px; /* Adjusted max-width for the skills section */
+      margin: 0 auto;
+    }
+    .skill {
+      margin: 10px 0;
+    }
+    .skill-name {
+      margin-bottom: 5px;
+    }
+    .skill-bar {
+      background-color: #444444;
+      border-radius: 25px;
+      overflow: hidden;
+    }
+    .skill-bar div {
+      height: 20px;
+      border-radius: 25px;
+    }
+    .html { width: 80%; background-color: #f44336; }
+    .css { width: 80%; background-color: #2196f3; }
+    .javascript { width: 70%; background-color: #fdd835; }
+
+    /* Responsive adjustments */
+    @media (max-width: 800px) {
+      .container {
+        padding: 10px; /* Adjusted padding for smaller screens */
+      }
+      .title {
+        font-size: 2em; /* Slightly reduced font size for smaller screens */
+      }
+      /* .image-box {
+        max-width: 50%; /* Full width for the image box on smaller screens */
+      
+      .skills {
+        max-width: 100%; /* Full width for the skills section on smaller screens */
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="aboutme.html" class="previous">&laquo; Previous</a>
+  <a href="certificate.html" class="next">Next &raquo;</a>
+  <div class="container">
+    <h1 class="title">SKILLS</h1>
+    <div class="image-box">
+      <!-- <img src="RESUME.png" alt="MY RESUME"> -->
+    </div>
+    <div class="section">
+      <h5>Experience</h5>
+      <p>I have experience in Webdev.</p>
+    </div>
+    <div class="section">
+      <h5>Education</h5>
+      <p>Pre Final year student at Manipal University Jaipur. Pursuing B.Tech in Information Technology.</p>
+    </div>
+    <div class="section">
+      <h5>Skills</h5>
+      <div class="skills">
+        <div class="skill">
+          <div class="skill-name">HTML</div>
+          <div class="skill-bar">
+            <div class="html"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">CSS</div>
+          <div class="skill-bar">
+            <div class="css"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">JavaScript</div>
+          <div class="skill-bar">
+            <div class="javascript"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

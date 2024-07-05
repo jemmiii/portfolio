@@ -1,0 +1,110 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Responsive NavBar</title>
+      <!-- Import Materialize CSS -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+      <!-- Internal CSS -->
+      <style>
+          /* Internal CSS for custom styling */
+          .brand-logo {
+              font-size: 2rem; /* Increased font size for brand logo */
+              padding-left: 15px; /* Added padding to align with menu icon */
+          }
+  
+          @media (max-width: 992px) {
+              .brand-logo {
+                  font-size: 1.5rem; /* Decreased font size for smaller screens */
+                  padding-left: 0; /* Reset padding for smaller screens */
+              }
+          }
+  
+          body {
+              background-color: #060000;
+              color: #fff;
+              margin: 0;
+          }
+  
+          header {
+              width: 100%;
+              position: fixed;
+              top: 0;
+              left: 0;
+              z-index: 1000;
+          }
+  
+          .content {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 100vh;
+              flex-direction: column;
+              padding-top: 64px; /* Height of the navbar to ensure content starts below it */
+          }
+  
+          .center-text {
+              font-size: 5rem;
+              text-align: center;
+              transition: opacity 1s ease-in-out;
+          }
+  
+          @media (max-width: 992px) {
+              .center-text {
+                  font-size: 3rem; /* Responsive font size */
+              }
+          }
+  
+          .hidden {
+              opacity: 0;
+          }
+      </style>
+  </head>
+  <body>
+      <header>
+          <nav class="blue"> <!-- Added class to style the background color -->
+              <div class="nav-wrapper">
+                  <a href="jeminlogo.jpg" class="brand-logo">JEMIN PATIDAR</a>
+                  <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                  <ul class="right hide-on-med-and-down">
+                      <li><a href="aboutme.html">About Me</a></li>
+                      <li><a href="resume.html">Skills</a></li>
+                      <li><a href="certificate.html">Certificate</a></li> <!-- Corrected spelling of "certificate" -->
+                      <li><a href="contactme.html">Contact Me</a></li> <!-- Corrected spelling of "contactme" -->
+                  </ul>
+              </div>
+          </nav>
+  
+          <ul class="sidenav" id="mobile-demo">
+              <li><a href="aboutme.html">About Me</a></li>
+              <li><a href="resume.html">Resume</a></li>
+              <li><a href="certificate.html">Certificate</a></li>
+              <li><a href="contactme.html">Contact Me</a></li>
+          </ul>
+      </header>
+  
+      <div class="content">
+          <div class="center-text" id="animated-text">JEMIN PATIDAR</div>
+      </div>
+  
+      <!-- Import jQuery and Materialize JS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- Added jQuery for Materialize JS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script>
+          // Initialize the side navigation
+          document.addEventListener('DOMContentLoaded', function() {
+              var elems = document.querySelectorAll('.sidenav');
+              var instances = M.Sidenav.init(elems);
+  
+              // Animation for the text
+              const textElement = document.getElementById('animated-text');
+              setInterval(() => {
+                  textElement.classList.toggle('hidden');
+              }, 2000); // 3 seconds interval
+          });
+      </script>
+  </body>
+  </html>
+  
